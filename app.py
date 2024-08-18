@@ -10,7 +10,7 @@ pipe = pickle.load(open('pipe.pkl','rb'))
 # dfm = pickle.load(open('df.pkl','rb'))
 
 
-st.title("Laptop Predictor")
+st.title("Laptop Price Predictor")
 
 # brand
 company = st.selectbox('Brand',df['Company'].unique())
@@ -31,7 +31,7 @@ touchscreen = st.selectbox('Touchscreen',['No','Yes'])
 ips = st.selectbox('IPS',['No','Yes'])
 
 # screen size
-screen_size = st.slider('Scrensize in inches', 10.0, 18.0, 13.0)
+screen_size = st.selectbox('Screensize in inches', [11.6,13.3,14,15.6,17.3,18])
 
 # resolution
 resolution = st.selectbox('Screen Resolution',['1920x1080','1366x768','1600x900','3840x2160','3200x1800','2880x1800','2560x1600','2560x1440','2304x1440'])
